@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
     <link
       rel="stylesheet"
       href="path/to/font-awesome/css/font-awesome.min.css"
@@ -22,7 +24,7 @@
       <span></span>
     </nav>
 
-    <section>
+    <section id="welcome">
       <h5>Hi, my name is</h5>
       <h1>Paul Glazzard.</h1>
       <h2>Britstol based Junior Software Developer.</h2>
@@ -30,32 +32,23 @@
     </section>
     <section>
       <h2>About</h2>
-      <div>
-        <a href="" onclick="toggleHiddenClass('div-1')" class="tab-rotate">Interests</a>
-        <a href="" onclick="toggleHiddenClass('div-2')" class="tab-rotate">Hobbies</a>
-        <a href="" onclick="toggleHiddenClass('div-3')" class="tab-rotate">Others</a>
-        <div id="div-1" class="hidden show page"><p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-          quo molestias non deserunt corporis. Minus voluptate blanditiis
-          aspernatur, harum cumque molestias, et, eos quibusdam ipsa rerum
-          facilis voluptatem alias odit.
+      <section id="aboutMe">
+        <a href="#" onclick="toggleHiddenClass('div-1')" class="tab-rotate">Interests</a>
+        <a href="#" onclick="toggleHiddenClass('div-2')" class="tab-rotate">Hobbies</a>
+        <a href="#" onclick="toggleHiddenClass('div-3')" class="tab-rotate">Others</a>
+        <section id="section-1" class="hidden show page">
+          <p>Always been interested in tech and web. Entered nology bootcamp in january 2020.</p>
         </p>
-        </div>
-        <div id="div-2" class="hidden page"><p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-          quo molestias non deserunt corporis. Minus voluptate blanditiis
-          aspernatur, harum cumque molestias, et, eos quibusdam ipsa rerum
-          facilis voluptatem alias odit.
+        </section>
+        <section id="section-2" class="hidden page">
+          <p>I'm interested in many different things, I go camping and hikinh regary with my friends. I also am a season tivket holder to Britstol Bears Rugby. </p>
+        </section>
+        <section id="section-3" class="hidden page">
+          <p>
+          I like reading, keeping fit, cooking and chillings.
         </p>
-        </div>
-        <div id="div-3" class="hidden page"><p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-          quo molestias non deserunt corporis. Minus voluptate blanditiis
-          aspernatur, harum cumque molestias, et, eos quibusdam ipsa rerum
-          facilis voluptatem alias odit.
-        </p>
-        </div>
-      </div>
+      </section>
+      </section>
       <img src="./images/paul-glazzard.png" alt="Paul Glazzard" id="profile-image" />
       <div>
         <h2>Technology I have been using</h2>
@@ -71,50 +64,46 @@
     <section id="portfolio">
       <h2>Portfolio</h2>
       <section>
-        <div>
-          <img src="./morsecode.png" alt="" class="project-image" />
+        <div class="portfolioCard">
+          <img src="./images/invader.webp" alt="" class="project-image" />
           <h3>Morsecode Translator</h3>
           <p>Javasvript Array Itarators</p>
         </div>
-        <div>
-          <img src="./invader.webp" alt="" class="project-image" />
-          <h3>Hostile Aliens</h3>
-          <p>OOP in Javasvript</p>
+        <div class="portfolioCard">
+          <img src="./images/invader.webp" alt="" class="project-image" />
+          <h3>Morsecode Translator</h3>
+          <p>Javasvript Array Itarators</p>
         </div>
-        <div>
-          <img src="./invader.webp" alt="" class="project-image" />
-          <h3>Hostile Aliens</h3>
-          <p>OOP in Javasvript</p>
+        <div class="portfolioCard">
+          <img src="./images/invader.webp" alt="" class="project-image" />
+          <h3>Morsecode Translator</h3>
+          <p>Javasvript Array Itarators</p>
         </div>
-        <div>
-          <img src="./invader.webp" alt="" class="project-image" />
-          <h3>Hostile Aliens</h3>
-          <p>OOP in Javasvript</p>
+        <div class="portfolioCard">
+          <img src="./images/invader.webp" alt="" class="project-image" />
+          <h3>Morsecode Translator</h3>
+          <p>Javasvript Array Itarators</p>
         </div>
-        <div>
-          <img src="./invader.webp" alt="" class="project-image" />
-          <h3>Hostile Aliens</h3>
-          <p>OOP in Javasvript</p>
+        <div class="portfolioCard">
+          <img src="./images/invader.webp" alt="" class="project-image" />
+          <h3>Morsecode Translator</h3>
+          <p>Javasvript Array Itarators</p>
         </div>
-        <div>
-          <img src="./invader.webp" alt="" class="project-image" />
-          <h3>Hostile Aliens</h3>
-          <p>OOP in Javasvript</p>
+        <div class="portfolioCard">
+          <img src="./images/invader.webp" alt="" class="project-image" />
+          <h3>Morsecode Translator</h3>
+          <p>Javasvript Array Itarators</p>
         </div>
-        <div>
-          <img src="./invader.webp" alt="" class="project-image" />
-          <h3>Hostile Aliens</h3>
-          <p>OOP in Javasvript</p>
-        </div>
+        
       </section>
 
       <section>
         <h2>Contact</h2>
         <form action="">
-          <input type="text" placeholder="d">
-          <input type="text" placeholder="d">
-          <input type="text" placeholder="d">
-          <input type="text" placeholder="d">
+          <input type="text" placeholder="Name">
+          <input type="email" placeholder="Email">
+          <input type="number" placeholder="Contact No.">
+          <input type="text" placeholder="How can I help?">
           <input type="submit" value="Send">
         </form>
       </section>

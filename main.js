@@ -1,6 +1,6 @@
 // alert("tsts");
 const toggleHiddenClass = id => {
-  const sectionIds = ["div-1", "div-2", "div-3"];
+  const sectionIds = ["section-1", "section-2", "section-3"];
   sectionIds.forEach(el =>
     document.getElementById(el).classList.remove("show")
   );

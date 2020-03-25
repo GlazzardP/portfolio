@@ -2,23 +2,42 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-  background-color: rgb(29, 29, 160);
+  background-color: rgb(240, 240, 240);
 }
 
+h2 {
+  color: rgb(116, 51, 255);
+}
 nav {
-  position: absolute;
+  // position: absolute;
   width: 100%;
-  height: 20%;
-  background-color: orangered;
-  opacity: 0.2;
+  height: 20vh;
+  background-color: navy;
+  border: solid red 2px;
+  // opacity: 0.2;
   a {
     text-decoration: none;
+    color: rgb(116, 51, 205);
   }
 }
 
+#welcome {
+  position: static;
+  border: solid yellow 5px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  p {
+    border: solid navy 2px;
+    color: rgb(80, 227, 194);
+  }
+}
 .page {
   width: 100vw;
   height: 100vh;
@@ -37,4 +56,29 @@ nav {
 
 #portfoli {
   text-align: center;
+}
+
+.portfolioCard {
+  border: solid black 2px;
+  h2 & p {
+    background-color: rgb(80, 227, 194);
+    opacity: 0.2;
+  }
+}
+
+#aboutMe {
+  a {
+    text-decoration: none;
+  }
+}
+form {
+  width: 90%;
+  border: solid aqua 2px;
+  input {
+    border: 2px solid red;
+    border-radius: 4px;
+    width: 100%;
+    margin: 10px;
+    height: 30px;
+  }
 }
