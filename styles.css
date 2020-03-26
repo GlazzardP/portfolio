@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #f0f0f0;
+  background-color: navy;
 }
 
 h2 {
@@ -18,7 +18,6 @@ nav {
   width: 100%;
   height: 20vh;
   background-color: navy;
-  border: solid red 2px;
 }
 
 nav a {
@@ -28,7 +27,6 @@ nav a {
 
 #welcome {
   position: static;
-  border: solid yellow 5px;
   height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,14 +51,55 @@ nav a {
   border: solid pink 2px;
 }
 
-#profile-image {
-  width: 30%;
-  height: 30%;
+.topBorder {
+  border-top: solid 10px red;
+}
+
+#usedTech {
+  border: red solid 2px;
+  background-color: wheat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#usedTech div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: solid blue 2px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#usedTech div > div {
+  background-color: red;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .project-image {
   width: 100%;
-  height: 60%;
+  height: 40%;
 }
 
 #portfoli {
@@ -69,6 +108,9 @@ nav a {
 
 .portfolioCard {
   border: solid black 2px;
+  margin: auto;
+  width: 80%;
+  text-align: center;
 }
 
 h2 .portfolioCard p {
