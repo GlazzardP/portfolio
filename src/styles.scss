@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: rgb(63, 63, 223);
+  scroll-behavior: smooth;
+}
+
+.button {
+  border: solid aqua 2px;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 5px;
+  margin: 5px;
+}
+
+h2 {
+  color: rgb(116, 51, 255);
+  // margin: 10px;
+}
+nav {
+  // position: absolute;
+  width: 100%;
+  height: 70px;
+  background-color: salmon;
+  // border: solid red 2px;
+  // opacity: 0.2;
+  a {
+    text-decoration: none;
+    color: rgb(116, 51, 205);
+  }
+}
+
+#welcome {
+  padding-left: 30px;
+  position: static;
+  // border: solid yellow 5px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  // border: solid red 2px;
+  padding-top: 50px;
+
+  h2 {
+    padding-top: 10px;
+    padding-bottom: 40px;
+  }
+
+  p {
+    padding: 5px;
+    border: solid 2px rgb(80, 227, 194);
+    color: rgb(80, 227, 194);
+    width: max-content;
+    border-radius: 5px;
+  }
+}
+.page {
+  width: 80vw;
+  height: max-content;
+  // border: solid pink 2px;
+  margin-top: 20px;
+}
+
+#aboutMe {
+  text-align: center;
+  a {
+    border: solid aqua 2px;
+    background-color: rgb(116, 51, 205);
+    color: aqua;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 20px 5px 0 5px;
+  }
+  p {
+    margin: auto;
+  }
+}
+
+#about {
+  h2 {
+    border: solid red 2px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+}
+
+// .topBorder {
+//   // border-top: solid 10px red;
+// }
+
+#usedTech {
+  border: red solid 2px;
+  background-color: wheat;
+  display: flex;
+  flex-direction: column;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    border: solid blue 2px;
+    justify-content: space-evenly;
+
+    > div {
+      // background-color: red;
+      height: max-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+}
+
+#portfolio {
+  border: springgreen solid 2px;
+  width: 100%;
+  h2 {
+    height: max-content;
+  }
+}
+.project-image {
+  width: 100%;
+  height: 40%;
+}
+
+.portfolioCard {
+  border: solid black 2px;
+  margin: 10px auto;
+  width: 80%;
+  text-align: center;
+
+  .portfolioCard:hover {
+    border: rgb(80, 227, 194);
+  }
+
+  h2 & p {
+    background-color: rgb(80, 227, 194);
+    opacity: 0.2;
+  }
+}
+
+#aboutMe {
+  a {
+    text-decoration: none;
+  }
+}
+form {
+  // width: 90%;
+  border: solid aqua 2px;
+  input {
+    border: 2px solid purple;
+    border-radius: 4px;
+    width: 100%;
+    height: 30px;
+  }
+
+  input:focus {
+    background-color: yellow;
+    border: aqua;
+  }
+}
+
+#submit {
+  height: 100px;
+}
