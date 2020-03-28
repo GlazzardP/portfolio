@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-
     <link
       rel="stylesheet"
       href="path/to/font-awesome/css/font-awesome.min.css"
@@ -18,7 +17,7 @@
     <nav>
       <a href="">Home</a>
       <a href="">About</a>
-      <a href="">Projects</a>
+      <a href="#portfolio">Projects</a>
       <a href="">Contact</a>
       <span></span>
       <span></span>
@@ -27,81 +26,90 @@
     <section id="welcome">
       <h5>Hi, my name is</h5>
       <h1>Paul Glazzard.</h1>
-      <h2>Britstol based Junior Software Developer.</h2>
-      <p class="button">Get in Touch</p>
+      <h2>A Bristol based Junior Software Developer.</h2>
+      <p class="button" href="mailto:glazzardp@gmail.com">Get in Touch</p>
     </section>
 
-    <section class="topBorder" id="about">
+    <section  id="about">
       <h2>About</h2>
       <section id="aboutMe">
-        <a href="#" onclick="toggleHiddenClass('div-1')" class="tab-rotate">Interests</a>
-        <a href="#" onclick="toggleHiddenClass('div-2')" class="tab-rotate">Hobbies</a>
-        <a href="#" onclick="toggleHiddenClass('div-3')" class="tab-rotate">Others</a>
-        <section id="section-1" class="hidden show page">
-          <p>Always been interested in tech and web. Entered nology bootcamp in january 2020.</p>
-          </p>
-        </section>
-        <section id="section-2" class="hidden page">
-          <p>I'm interested in many different things, I go camping and hikinh regary with my friends. I also am a season tivket holder to Britstol Bears Rugby. </p>
-        </section>
-        <section id="section-3" class="hidden page">
-          <p>
-            I like reading, keeping fit, cooking and chillings.
-          </p>
-        </section>
+        <div id="yetAnotherAboutMe">
+          <a href="#" onclick="toggleHiddenClass('div-1')" class="tab-rotate">Interests</a>
+          <a href="#" onclick="toggleHiddenClass('div-2')" class="tab-rotate">Hobbies</a>
+          <a href="#" onclick="toggleHiddenClass('div-3')" class="tab-rotate">Others</a>
+      </div>
+      <div id="anotherAboutMe">
+        <div>
+          <section id="section-1" class="hidden show page">
+            <p>Always been interested in tech and web. Entered nology bootcamp in january 2020.</p>
+            </p>
+          </section>
+          <!-- <section id="section-2" class="hidden page">
+            <p>I'm interested in many different things, I go camping and hikinh regary with my friends. I also am a season tivket holder to Britstol Bears Rugby. </p>
+          </section>
+          <section id="section-3" class="hidden page">
+            <p>
+              I like reading, keeping fit, cooking and chillings.
+            </p>
+          </section> -->
+        </div>
+        <div>
+          <img src="./images/paul-glazzard.png" alt="">
+        </div>
+    </div>
       </section>
 
         <div id="usedTech">
             <h3>Technology I have been using</h3>
-            <!-- <img src="./images/paul-glazzard.png" alt="Paul Glazzard" id="profile-image" /> -->
-          <div>
-            <div>
-            <p>Javascript</p>
-            <p>HTML</p>
-            <p>CSS/SCSS</p>
-            <p>React</p>
-            <p>Firebase</p>
-          </div>
           <div>
             <p>Javascript</p>
             <p>HTML</p>
             <p>CSS/SCSS</p>
             <p>React</p>
             <p>Firebase</p>
-          </div>
         </div>
       </div>
     </section>
 
-    <section class="topBorder"  id="portfolio">
+    <section id="portfolio">
       <h2>Portfolio</h2>
-      <section>
-        <div class="portfolioCard" >
-          <img src="./images/invader.webp" alt="" class="project-image" />
-          <h3>Aliens</h3>
-          <p>Javasvript Array Itarators</p>
+      <section id="flexProj">
+        <div>
+        <a href="https://glazzardp.github.io/Morsecode/">
+          <div class="portfolioCard item1"  >
+            <img src="./images/invader.webp" alt="" class="project-image" />
+            <p class="projectText">Text about the project, with some insight and stuff</p>
+            <h3>Aliens</h3>
+            <p>Javasvript Array Itarators</p>
+          </div>
+      </a>
+        <a href="https://glazzardp.github.io/hostile-aliens/"><div class="portfolioCard item2">
+            <img src="./images/morse.jfif" alt="" class="project-image" />
+            <h3>Morsecode Translator</h3>
+            <p>Javasvript Array Itarators</p>
         </div>
-        <div class="portfolioCard">
-          <img src="./images/morse.jfif" alt="" class="project-image" />
-          <h3>Morsecode Translator</h3>
-          <p>Javasvript Array Itarators</p>
+      </div>
+      </a>
+      <div>
+        <a href=""><div class="portfolioCard item3">
+            <img src="./images/best-to-do-list-apps-for-task-management (1).jpg" alt="" class="project-image" />
+            <h3>Morsecode Translator</h3>
+            <p>React - CRUD Operations - Firebase</p>
         </div>
-        <div class="portfolioCard">
-          <img src="./images/best-to-do-list-apps-for-task-management (1).jpg" alt="" class="project-image" />
-          <h3>Morsecode Translator</h3>
-          <p>React - CRUD Operations - Firebase</p>
+      </a>
+        <a href=""><div class="portfolioCard item4">
+            <img src="./images/Bears-logo-on-white.jpg" alt="" class="project-image" />
+            <h3>Rugby Team Selector</h3>
+            <p>React</p>
         </div>
-        <div class="portfolioCard">
-          <img src="./images/Bears-logo-on-white.jpg" alt="" class="project-image" />
-          <h3>Rugby Team Selector</h3>
-          <p>React</p>
-        </div>
+      </a>
+    </div>
         
       </section>
 
-      <section class="topBorder">
+      <section id="contact">
         <h2>Contact</h2>
-<p class="button">Say Hi</p>
+<!-- <p class="button">Say Hi</p> -->
       </section>
   </body>
 </html>

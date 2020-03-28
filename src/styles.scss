@@ -1,3 +1,7 @@
+$primary-color: rgb(10, 25, 47);
+$secondary-color: rgb(80, 227, 194);
+$tertiary-color: rgb(116, 51, 255);
+
 * {
   margin: 0;
   padding: 0;
@@ -6,12 +10,12 @@
 }
 
 body {
-  background-color: rgb(63, 63, 223);
+  background-color: whitesmoke;
   scroll-behavior: smooth;
 }
 
 .button {
-  border: solid aqua 2px;
+  border: solid 2px $secondary-color;
   border-radius: 5px;
   text-decoration: none;
   padding: 5px;
@@ -19,112 +23,98 @@ body {
 }
 
 h2 {
-  color: rgb(116, 51, 255);
-  // margin: 10px;
+  color: $secondary-color;
 }
 nav {
-  // position: absolute;
   width: 100%;
   height: 70px;
-  background-color: salmon;
-  // border: solid red 2px;
-  // opacity: 0.2;
+  background-color: $primary-color;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
   a {
     text-decoration: none;
-    color: rgb(116, 51, 205);
+    margin: auto 10px;
+    color: $secondary-color;
   }
 }
 
 #welcome {
   padding-left: 30px;
   position: static;
-  // border: solid yellow 5px;
   height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  // border: solid red 2px;
   padding-top: 50px;
 
   h2 {
     padding-top: 10px;
     padding-bottom: 40px;
+    color: $secondary-color;
   }
 
   p {
     padding: 5px;
-    border: solid 2px rgb(80, 227, 194);
-    color: rgb(80, 227, 194);
+    border: solid 2px $secondary-color;
+    color: $secondary-color;
     width: max-content;
     border-radius: 5px;
-  }
-}
-.page {
-  width: 80vw;
-  height: max-content;
-  // border: solid pink 2px;
-  margin-top: 20px;
-}
-
-#aboutMe {
-  text-align: center;
-  a {
-    border: solid aqua 2px;
-    background-color: rgb(116, 51, 205);
-    color: aqua;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 20px 5px 0 5px;
-  }
-  p {
-    margin: auto;
   }
 }
 
 #about {
   h2 {
-    border: solid red 2px;
     margin-bottom: 10px;
     padding: 10px;
+    width: 100%;
+    background-color: $primary-color;
+    float: right;
   }
 }
 
-// .topBorder {
-//   // border-top: solid 10px red;
-// }
+#aboutMe {
+  text-align: center;
+  a {
+    border: solid 2px $secondary-color;
+    color: $tertiary-color;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 20px 5px 0 5px;
+    text-decoration: none;
+  }
+  p {
+    margin: auto;
+    text-align: center;
+  }
+
+  img {
+    display: none;
+  }
+}
 
 #usedTech {
-  border: red solid 2px;
-  background-color: wheat;
-  display: flex;
-  flex-direction: column;
+  h3 {
+    color: $tertiary-color;
+  }
 
   div {
     display: flex;
     flex-direction: row;
-    border: solid blue 2px;
-    justify-content: space-evenly;
-
-    > div {
-      // background-color: red;
-      height: max-content;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-    }
   }
 }
 
 #portfolio {
-  border: springgreen solid 2px;
   width: 100%;
+  // padding: 10px;
+
   h2 {
-    height: max-content;
+    padding: 10px;
+    width: 100%;
+    background-color: $primary-color;
+    text-decoration: none;
   }
-}
-.project-image {
-  width: 100%;
-  height: 40%;
 }
 
 .portfolioCard {
@@ -134,25 +124,35 @@ nav {
   text-align: center;
 
   .portfolioCard:hover {
-    border: rgb(80, 227, 194);
+    border: $secondary-color;
+  }
+
+  .projectText {
+    display: none;
+    color: $secondary-color;
+  }
+  .projectText:hover {
+    display: flex;
+    color: $secondary-color;
   }
 
   h2 & p {
-    background-color: rgb(80, 227, 194);
+    background-color: $secondary-color;
     opacity: 0.2;
+  }
+
+  img {
+    width: 100%;
+    height: 40%;
+    max-height: 220px;
   }
 }
 
-#aboutMe {
-  a {
-    text-decoration: none;
-  }
-}
 form {
-  // width: 90%;
-  border: solid aqua 2px;
+  border: solid 2px $secondary-color;
+
   input {
-    border: 2px solid purple;
+    border: 2px solid $tertiary-color;
     border-radius: 4px;
     width: 100%;
     height: 30px;
@@ -160,10 +160,82 @@ form {
 
   input:focus {
     background-color: yellow;
-    border: aqua;
+    border: $secondary-color;
   }
 }
 
 #submit {
   height: 100px;
+}
+
+#contact {
+  height: 100vh;
+}
+
+@media only screen and (min-width: 768px) {
+  #welcome {
+    margin: 10% 0 0 10%;
+
+    h5 {
+      font-size: 20px;
+    }
+    h1 {
+      font-size: 50px;
+    }
+    h2 {
+      font-size: 30px;
+    }
+    p {
+      margin-top: 50px;
+    }
+  }
+
+  #about {
+    h2 {
+      margin-bottom: 20px;
+    }
+    #aboutMe {
+      > div {
+        border: solid red 2px;
+      }
+      #yetAnotherAboutMe {
+        display: flex;
+        flex-direction: row;
+      }
+
+      #anotherAboutMe {
+        display: flex;
+        flex-direction: row;
+      }
+      a {
+        font-size: 20px;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        border-radius: 2px;
+        background-color: $tertiary-color;
+        color: $secondary-color;
+        height: 50px;
+        width: 100px;
+      }
+      img {
+        display: flex;
+        height: 200px;
+        width: 200px;
+      }
+    }
+  }
+}
+
+#flexProj {
+  border: solid red 2px;
+  display: flex;
+  flex-direction: row;
+
+  div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
 }
