@@ -152,9 +152,10 @@ form {
   border: solid 2px $secondary-color;
 
   input {
+    margin: 10px 0 0 25%;
     border: 2px solid $tertiary-color;
     border-radius: 4px;
-    width: 100%;
+    width: 50%;
     height: 30px;
   }
 
@@ -191,13 +192,11 @@ form {
   }
 
   #about {
-    h2 {
-      margin-bottom: 20px;
-    }
     #aboutMe {
-      > div {
-        border: solid red 2px;
-      }
+      // > div {
+      //   border: solid red 2px;
+      // }
+
       #yetAnotherAboutMe {
         display: flex;
         flex-direction: row;
@@ -213,11 +212,13 @@ form {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+
         border-radius: 2px;
         background-color: $tertiary-color;
         color: $secondary-color;
         height: 50px;
         width: 100px;
+        margin: 70px 5px 20px 5px;
       }
       img {
         display: flex;
@@ -228,14 +229,20 @@ form {
   }
 }
 
-#flexProj {
-  border: solid red 2px;
-  display: flex;
-  flex-direction: row;
+// #flexProj {
+//   border: solid red 2px;
+//   display: flex;
+//   flex-direction: row;
 
-  div {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
+//   div {
+//     width: 50%;
+//     display: flex;
+//     flex-direction: column;
+//   }
+// }
+
+.portfolioCard {
+  img {
+    max-height: 300px;
   }
 }
