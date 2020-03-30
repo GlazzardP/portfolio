@@ -4,6 +4,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -78,33 +79,47 @@ nav a {
 }
 
 #about h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-bottom: 10px;
   padding: 10px;
   width: 100%;
   background-color: #0a192f;
-  float: right;
 }
 
-#aboutMe {
+#about {
   text-align: center;
+  margin-bottom: 30px;
 }
 
-#aboutMe a {
+#about div {
+  margin-top: 20px;
+  height: 75px;
+}
+
+#about span {
   border: solid 2px #50e3c2;
-  color: #7433ff;
+  color: #0a192f;
   border-radius: 5px;
   padding: 5px;
-  margin: 20px 5px 0 5px;
+  margin: 0 5px 0 5px;
   text-decoration: none;
 }
 
-#aboutMe p {
+#about p {
   margin: auto;
   text-align: center;
 }
 
-#aboutMe img {
-  display: none;
+#about img {
+  height: 100px;
+  width: 100px;
+}
+
+#anotherAboutMe {
+  border: solid red 2px;
+  margin-bottom: 20px;
 }
 
 #usedTech h3 {
@@ -121,57 +136,29 @@ nav a {
           flex-direction: row;
 }
 
-#portfolio {
-  width: 100%;
-}
-
-#portfolio h2 {
-  padding: 10px;
+#portfolio-section h2 {
   width: 100%;
   background-color: #0a192f;
-  text-decoration: none;
-}
-
-#portfolio div > h3 {
-  text-decoration: none;
-}
-
-#portfolio p {
-  text-decoration: none;
-}
-
-.portfolioCard {
-  border: solid black 2px;
-  margin: 10px auto;
-  width: 80%;
-  text-align: center;
-}
-
-.portfolioCard .portfolioCard:hover {
-  border: #50e3c2;
-}
-
-.portfolioCard .projectText {
-  display: none;
   color: #50e3c2;
+  padding: 10px;
 }
 
-.portfolioCard .projectText:hover {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: #50e3c2;
+#portfolio {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
 }
 
-h2 .portfolioCard p {
-  background-color: #50e3c2;
-  opacity: 0.2;
+#portfolio div {
+  border: solid red 2px;
+  height: 50vh;
+  margin: 10px 0;
 }
 
-.portfolioCard img {
+#portfolio img {
+  height: 80%;
   width: 100%;
-  height: 40%;
-  max-height: 220px;
 }
 
 form {
@@ -195,10 +182,6 @@ form input:focus {
   height: 100px;
 }
 
-#contact {
-  height: 100vh;
-}
-
 #contact p {
   width: 80%;
   text-align: center;
@@ -207,7 +190,18 @@ form input:focus {
 }
 
 footer {
+  margin-top: 50px;
   color: #50e3c2;
+  background-color: #0a192f;
+}
+
+footer p {
+  padding: 18px;
+}
+
+#contact h2 {
+  padding: 10px;
+  width: 100%;
   background-color: #0a192f;
 }
 
@@ -227,25 +221,7 @@ footer {
   #welcome p {
     margin-top: 50px;
   }
-  #about #aboutMe #yetAnotherAboutMe {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  #about #aboutMe #anotherAboutMe {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  #about #aboutMe a {
+  #about a {
     font-size: 20px;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -267,7 +243,7 @@ footer {
     width: 100px;
     margin: 70px 5px 20px 5px;
   }
-  #about #aboutMe img {
+  #about img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -276,7 +252,26 @@ footer {
   }
 }
 
-.portfolioCard img {
-  max-height: 300px;
+#portfolio div {
+  width: 80%;
+  margin: 10px auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  nav a {
+    margin-right: 50px;
+    color: #50e3c2;
+  }
+  #portfolio {
+    margin-bottom: 30px;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 0 200px;
+  }
+  #portfolio div {
+    width: 100%;
+    max-width: 500px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

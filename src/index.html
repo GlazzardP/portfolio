@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
     <link rel="stylesheet" href="./styles.css" />
     <script src="./main.js" async defer></script>
     <title>Paul Glazzard</title>
@@ -14,9 +12,9 @@
   <body>
     <nav>
       <a href="">Home</a>
-      <a href="">About</a>
+      <a href="#about">About</a>
       <a href="#portfolio">Projects</a>
-      <a href="">Contact</a>
+      <a href="#about">Contact</a>
       <span></span>
       <span></span>
     </nav>
@@ -28,84 +26,71 @@
       <p class="button" href="mailto:glazzardp@gmail.com">Get in Touch</p>
     </section>
 
-    <section  id="about">
+    <section id="about" class="section-header">
       <h2>About</h2>
-      <section id="aboutMe">
-        <div id="yetAnotherAboutMe">
-          <a href="#" onclick="toggleHiddenClass('div-1')" class="tab-rotate">Interests</a>
-          <a href="#" onclick="toggleHiddenClass('div-2')" class="tab-rotate">Hobbies</a>
-          <a href="#" onclick="toggleHiddenClass('div-3')" class="tab-rotate">Others</a>
+      <div>
+          <span onclick="toggleHiddenClass('section-1')" class="tab-rotate">Interests</span>
+          <span onclick="toggleHiddenClass('section-2')" class="tab-rotate">Hobbies</span>
+          <span onclick="toggleHiddenClass('section-3')" class="tab-rotate">Others</span>
       </div>
-      <div id="anotherAboutMe">
-        <div>
           <section id="section-1" class="hidden show page">
             <p>Always been interested in tech and web. Entered nology bootcamp in january 2020.</p>
             </p>
+            <img src="./images/paul-glazzard.png" alt="">
           </section>
-          <!-- <section id="section-2" class="hidden page">
-            <p>I'm interested in many different things, I go camping and hikinh regary with my friends. I also am a season tivket holder to Britstol Bears Rugby. </p>
+          <section id="section-2" class="hidden page">
+            <p>I go camping and hikinh regary with my friends. I also am a season tivket holder to Britstol Bears Rugby. </p>
+            <img src="./images/paul-glazzard.png" alt="">
+
           </section>
           <section id="section-3" class="hidden page">
             <p>
               I like reading, keeping fit, cooking and chillings.
             </p>
-          </section> -->
-        </div>
-        <div>
-          <img src="./images/paul-glazzard.png" alt="">
-        </div>
+            <img src="./images/paul-glazzard.png" alt="">
+
+          </section>
     </div>
       </section>
 
-        <div id="usedTech">
-            <h3>Technology I have been using</h3>
-          <div>
-            <p>Javascript</p>
-            <p>HTML</p>
-            <p>CSS/SCSS</p>
-            <p>React</p>
-            <p>Firebase</p>
-        </div>
+    </section>
+    <section id="portfolio-section">
+      <h2>Portfolio</h2>
+    </section>
+    <section id="portfolio" class="section-header">
+      <div>
+        <img src="./images/news.png" alt="" class="project-image" />
+        <h3>Aliens</h3>
+        <p>Javasvript Array Itarators</p></div>
+      <div>         
+        <img src="./images/Bears-logo-on-white.jpg" alt=""/>
+        <h3>Morsecode Translator</h3>
+        <p>Javasvript Array Itarators</p>
       </div>
+      <div>          
+        <img src="./images/invader.webp" alt=""/>
+        <h3>Morsecode Translator</h3>
+        <p>React - CRUD Operations - Firebase</p>
+      </div>
+      <div>            
+        <img src="./images/morse.jfif" alt="" />
+        <h3>Morsecode Translator</h3>
+        <p>React - CRUD Operations - Firebase</p></div>
+      <div>     
+        <img src="./images/best-to-do-list-apps-for-task-management (1).jpg" alt="" />
+        <h3>News Application</h3>
+        <p>React - CRUD Operations - Firebase - Authentication</p>
+      </div>
+      <div>       
+        <img src="./ipg" alt="" />
+        <h3>Hall of Shaem</h3>
+        <p>Api and ting</p>
+      </div>
+      <div>Test</div>
+      <div>Test</div>
     </section>
 
-    <section id="portfolio">
-      <h2>Portfolio</h2>
-      <section id="flexProj">
-        <div>
-        <a href="https://glazzardp.github.io/Morsecode/">
-          <div class="portfolioCard item1"  >
-            <img src="./images/invader.webp" alt="" class="project-image" />
-            <p class="projectText">Text about the project, with some insight and stuff</p>
-            <h3>Aliens</h3>
-            <p>Javasvript Array Itarators</p>
-          </div>
-      </a>
-        <a href="https://glazzardp.github.io/hostile-aliens/"><div class="portfolioCard item2">
-            <img src="./images/morse.jfif" alt="" class="project-image" />
-            <h3>Morsecode Translator</h3>
-            <p>Javasvript Array Itarators</p>
-        </div>
-      </div>
-      </a>
-      <div>
-        <a href=""><div class="portfolioCard item3">
-            <img src="./images/best-to-do-list-apps-for-task-management (1).jpg" alt="" class="project-image" />
-            <h3>Morsecode Translator</h3>
-            <p>React - CRUD Operations - Firebase</p>
-        </div>
-      </a>
-        <a href=""><div class="portfolioCard item4">
-            <img src="./images/Bears-logo-on-white.jpg" alt="" class="project-image" />
-            <h3>Rugby Team Selector</h3>
-            <p>React</p>
-        </div>
-      </a>
-    </div>
-        
-      </section>
-
-      <section id="contact">
+      <section id="contact" class="section-header">
         <h2>Contact</h2>
         <p>
           Whether you are thinking about starting in a career in 
@@ -126,10 +111,10 @@
 
       <footer>
         <p>Designed & built by Paul Glazzard</p>
-        <span class=" fa fab fa-gspanthub-square"></span>
+         <!-- <span class=" fa fab fa-gspanthub-square"></span>
         <span class=" fa fab fa-lspannkedspann"></span>
-        <span class=" fa far fa-envelope"><p>Email me</p></span>
-        <span class=" fa far fa-file"><p>CV</p></span>
+        <span class=" fa far fa-envelope"><p>Email me</p></span> -->
+        <!-- <span class=" fa far fa-file"><p>CV</p></span> -->
         <span class=" fa fas fa-map-marker-alt"><p>Central Bristol, UK</p></span>
       </footer>
     </body>

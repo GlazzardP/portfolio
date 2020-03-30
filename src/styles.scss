@@ -2,11 +2,14 @@ $primary-color: rgb(10, 25, 47);
 $secondary-color: rgb(80, 227, 194);
 $tertiary-color: rgb(116, 51, 255);
 
+$base-spacing: 6px;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -66,22 +69,30 @@ nav {
 
 #about {
   h2 {
+    display: flex;
     margin-bottom: 10px;
     padding: 10px;
     width: 100%;
     background-color: $primary-color;
-    float: right;
   }
 }
 
-#aboutMe {
+#about {
+  // border: solid black 2px;
   text-align: center;
-  a {
+  margin-bottom: 30px;
+
+  div {
+    // border: solid red 2px;
+    margin-top: 20px;
+    height: 75px;
+  }
+  span {
     border: solid 2px $secondary-color;
-    color: $tertiary-color;
+    color: $primary-color;
     border-radius: 5px;
     padding: 5px;
-    margin: 20px 5px 0 5px;
+    margin: 0 5px 0 5px;
     text-decoration: none;
   }
   p {
@@ -90,8 +101,14 @@ nav {
   }
 
   img {
-    display: none;
+    height: 100px;
+    width: 100px;
   }
+}
+
+#anotherAboutMe {
+  border: solid red 2px;
+  margin-bottom: 20px;
 }
 
 #usedTech {
@@ -105,54 +122,28 @@ nav {
   }
 }
 
-#portfolio {
-  width: 100%;
-  // padding: 10px;
-
+#portfolio-section {
   h2 {
-    padding: 10px;
     width: 100%;
     background-color: $primary-color;
-    text-decoration: none;
-  }
-
-  div > h3 {
-    text-decoration: none;
-  }
-
-  p {
-    text-decoration: none;
+    color: $secondary-color;
+    padding: 10px;
   }
 }
 
-.portfolioCard {
-  border: solid black 2px;
-  margin: 10px auto;
-  width: 80%;
-  text-align: center;
+#portfolio {
+  display: grid;
+  grid-template-columns: 1fr;
 
-  .portfolioCard:hover {
-    border: $secondary-color;
-  }
-
-  .projectText {
-    display: none;
-    color: $secondary-color;
-  }
-  .projectText:hover {
-    display: flex;
-    color: $secondary-color;
-  }
-
-  h2 & p {
-    background-color: $secondary-color;
-    opacity: 0.2;
+  div {
+    border: solid red 2px;
+    height: 50vh;
+    margin: 10px 0;
   }
 
   img {
+    height: 80%;
     width: 100%;
-    height: 40%;
-    max-height: 220px;
   }
 }
 
@@ -178,8 +169,6 @@ form {
 }
 
 #contact {
-  height: 100vh;
-
   p {
     width: 80%;
     text-align: center;
@@ -189,8 +178,21 @@ form {
 }
 
 footer {
+  margin-top: 50px;
   color: $secondary-color;
   background-color: $primary-color;
+
+  p {
+    padding: $base-spacing * 3;
+  }
+}
+
+#contact {
+  h2 {
+    padding: 10px;
+    width: 100%;
+    background-color: $primary-color;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -212,45 +214,64 @@ footer {
   }
 
   #about {
-    #aboutMe {
-      // > div {
-      //   border: solid red 2px;
-      // }
+    // #aboutMe {
+    // > div {
+    //   border: solid red 2px;
+    // }
 
-      #yetAnotherAboutMe {
-        display: flex;
-        flex-direction: row;
-      }
+    // #yetAnotherAboutMe {
+    //   display: flex;
+    //   flex-direction: row;
+    // }
 
-      #anotherAboutMe {
-        display: flex;
-        flex-direction: row;
-      }
-      a {
-        font-size: 20px;
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
+    // #anotherAboutMe {
+    //   display: flex;
+    //   flex-direction: row;
+    // }
+    a {
+      font-size: 20px;
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
 
-        border-radius: 2px;
-        background-color: $tertiary-color;
-        color: $secondary-color;
-        height: 50px;
-        width: 100px;
-        margin: 70px 5px 20px 5px;
-      }
-      img {
-        display: flex;
-        height: 200px;
-        width: 200px;
-      }
+      border-radius: 2px;
+      background-color: $tertiary-color;
+      color: $secondary-color;
+      height: 50px;
+      width: 100px;
+      margin: 70px 5px 20px 5px;
+    }
+    img {
+      display: flex;
+      height: 200px;
+      width: 200px;
     }
   }
 }
 
-.portfolioCard {
-  img {
-    max-height: 300px;
+#portfolio {
+  div {
+    width: 80%;
+    margin: 10px auto;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    a {
+      margin-right: 50px;
+      color: $secondary-color;
+    }
+  }
+  #portfolio {
+    margin-bottom: $base-spacing * 5;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 0 200px;
+    div {
+      width: 100%;
+      max-width: 500px;
+    }
   }
 }
