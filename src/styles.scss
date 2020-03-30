@@ -1,6 +1,9 @@
-$primary-color: rgb(10, 25, 47);
-$secondary-color: rgb(80, 227, 194);
-$tertiary-color: rgb(116, 51, 255);
+$tertiary-color: rgb(48, 55, 77);
+// $primary-color: rgb(80, 227, 194);
+$secondary-color: rgb(217, 231, 238);
+$primary-color: rgb(27, 164, 162);
+
+// $body-color: rgb(10, 25, 47)
 
 $base-spacing: 6px;
 
@@ -13,8 +16,20 @@ $base-spacing: 6px;
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: $tertiary-color;
   scroll-behavior: smooth;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.rotate {
+  transform: rotate(90deg);
 }
 
 .button {
@@ -90,10 +105,11 @@ nav {
   span {
     border: solid 2px $secondary-color;
     color: $primary-color;
-    border-radius: 5px;
+    border-radius: 1px;
     padding: 5px;
     margin: 0 5px 0 5px;
     text-decoration: none;
+    cursor: pointer;
   }
   p {
     margin: auto;
@@ -101,15 +117,25 @@ nav {
   }
 
   img {
+    margin-right: 100px;
     height: 100px;
     width: 100px;
   }
 }
 
-#anotherAboutMe {
-  border: solid red 2px;
-  margin-bottom: 20px;
-}
+// .aboutPage {
+//   display: flex;
+//   border: $secondary-color solid 2px;
+
+//   > * {
+//     border: solid red 2px;
+//   }
+// }
+
+// #anotherAboutMe {
+//   border: solid red 2px;
+//   margin-bottom: 20px;
+// }
 
 #usedTech {
   h3 {
@@ -136,10 +162,17 @@ nav {
   grid-template-columns: 1fr;
 
   div {
-    border: solid red 2px;
+    border: solid 2px $secondary-color;
     height: 50vh;
     margin: 10px 0;
+    color: $secondary-color;
+    text-align: center;
   }
+
+  // h3,
+  // p {
+  //   padding-left: $base-spacing;
+  // }
 
   img {
     height: 80%;

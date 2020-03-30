@@ -5,6 +5,6 @@ const toggleHiddenClass = id => {
     document.getElementById(el).classList.remove("show")
   );
   sectionIds.forEach(el =>
-    el === sectionIds ? document.getElementById(id).classList.add("show") : null
+    el === id ? document.getElementById(el).classList.add("show") : null
   );
 };
