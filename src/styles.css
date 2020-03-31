@@ -9,7 +9,6 @@
 
 body {
   background-color: #30374d;
-  scroll-behavior: smooth;
 }
 
 .hidden {
@@ -20,26 +19,25 @@ body {
   display: block;
 }
 
-.rotate {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
 .button {
   border: solid 2px #d9e7ee;
   border-radius: 5px;
   text-decoration: none;
   padding: 5px;
   margin: 5px;
-}
-
-h2 {
+  min-width: 80px;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  max-height: -webkit-min-content;
+  max-height: -moz-min-content;
+  max-height: min-content;
   color: #d9e7ee;
 }
 
 nav {
   width: 100%;
-  height: 70px;
+  height: 10vh;
   background-color: #1ba4a2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,6 +56,15 @@ nav a {
   color: #d9e7ee;
 }
 
+.header {
+  height: 10vh;
+  background-color: #1ba4a2;
+  color: #d9e7ee;
+  padding: 18px;
+  width: 100%;
+  margin: 30px 0;
+}
+
 #welcome {
   padding-left: 30px;
   position: static;
@@ -72,13 +79,6 @@ nav a {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding-top: 50px;
-}
-
-#welcome h2 {
-  padding-top: 10px;
-  padding-bottom: 40px;
-  color: #d9e7ee;
 }
 
 #welcome p {
@@ -91,39 +91,21 @@ nav a {
   border-radius: 5px;
 }
 
-#about h2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 10px;
-  padding: 10px;
-  width: 100%;
-  background-color: #1ba4a2;
-}
-
-#about {
-  text-align: center;
-  margin-bottom: 30px;
+.viewPort {
+  min-height: 100vh;
 }
 
 #about div {
-  margin-top: 20px;
+  margin: 10% 0 0 10%;
+  padding-left: 30px;
   height: 75px;
-}
-
-#about span {
-  border: solid 2px #d9e7ee;
-  color: #1ba4a2;
-  border-radius: 1px;
-  padding: 5px;
-  margin: 0 5px 0 5px;
-  text-decoration: none;
-  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 #about p {
-  margin: auto;
-  text-align: center;
+  color: #d9e7ee;
 }
 
 #about img {
@@ -132,38 +114,18 @@ nav a {
   width: 100px;
 }
 
-#usedTech h3 {
-  color: #30374d;
-}
-
-#usedTech div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-#portfolio-section h2 {
-  width: 100%;
-  background-color: #1ba4a2;
-  color: #d9e7ee;
-  padding: 10px;
-}
-
 #portfolio {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
+  grid-gap: 10px;
 }
 
 #portfolio div {
   border: solid 2px #d9e7ee;
   height: 50vh;
-  margin: 10px 0;
+  margin: 0 auto;
   color: #d9e7ee;
   text-align: center;
 }
@@ -173,52 +135,37 @@ nav a {
   width: 100%;
 }
 
-form {
-  border: solid 2px #d9e7ee;
-}
-
-form input {
-  margin: 10px 0 0 25%;
-  border: 2px solid #30374d;
-  border-radius: 4px;
-  width: 50%;
-  height: 30px;
-}
-
-form input:focus {
-  background-color: yellow;
-  border: #d9e7ee;
-}
-
-#submit {
-  height: 100px;
-}
-
 #contact p {
   width: 80%;
   text-align: center;
   margin: auto;
   padding: 20px 0;
+  color: #d9e7ee;
+}
+
+#contact span {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 footer {
-  margin-top: 50px;
   color: #d9e7ee;
   background-color: #1ba4a2;
 }
 
 footer p {
-  padding: 18px;
-}
-
-#contact h2 {
-  padding: 10px;
-  width: 100%;
-  background-color: #1ba4a2;
+  padding: 12px;
 }
 
 @media only screen and (min-width: 768px) {
   #welcome {
+    padding-left: 0;
     margin: 10% 0 0 10%;
   }
   #welcome h5 {
@@ -233,27 +180,8 @@ footer p {
   #welcome p {
     margin-top: 50px;
   }
-  #about a {
-    font-size: 20px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    border-radius: 2px;
-    background-color: #30374d;
-    color: #d9e7ee;
-    height: 50px;
-    width: 100px;
-    margin: 70px 5px 20px 5px;
+  #about div {
+    padding-left: 0;
   }
   #about img {
     display: -webkit-box;
@@ -266,7 +194,6 @@ footer p {
 
 #portfolio div {
   width: 80%;
-  margin: 10px auto;
 }
 
 @media only screen and (min-width: 1024px) {
