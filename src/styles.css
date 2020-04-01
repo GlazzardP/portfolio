@@ -11,12 +11,20 @@ body {
   background-color: #30374d;
 }
 
-.hidden {
+.hidden p,
+.hidden img {
   display: none;
 }
 
-.show {
+.show p,
+.show img {
   display: block;
+  color: #d9e7ee;
+}
+
+.show img {
+  height: 100px;
+  width: 100px;
 }
 
 .button {
@@ -29,9 +37,6 @@ body {
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
-  max-height: -webkit-min-content;
-  max-height: -moz-min-content;
-  max-height: min-content;
   color: #d9e7ee;
 }
 
@@ -62,7 +67,6 @@ nav a {
   color: #d9e7ee;
   padding: 18px;
   width: 100%;
-  margin: 30px 0;
 }
 
 #welcome {
@@ -79,6 +83,12 @@ nav a {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  margin-top: 20%;
+}
+
+#welcome h2,
+#welcome h1 {
+  margin-top: 5px;
 }
 
 #welcome p {
@@ -89,6 +99,7 @@ nav a {
   width: -moz-max-content;
   width: max-content;
   border-radius: 5px;
+  margin: 50px 0 0 0;
 }
 
 .viewPort {
@@ -96,22 +107,36 @@ nav a {
 }
 
 #about div {
-  margin: 10% 0 0 10%;
-  padding-left: 30px;
-  height: 75px;
+  margin: 5px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#about section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 #about p {
-  color: #d9e7ee;
+  max-width: 80%;
+  text-align: center;
+  margin: 10px auto;
 }
 
 #about img {
-  margin-right: 100px;
-  height: 100px;
-  width: 100px;
+  margin: 0 auto;
 }
 
 #portfolio {
@@ -120,6 +145,7 @@ nav a {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   grid-gap: 10px;
+  margin: 20px 0;
 }
 
 #portfolio div {
@@ -128,6 +154,7 @@ nav a {
   margin: 0 auto;
   color: #d9e7ee;
   text-align: center;
+  width: 80%;
 }
 
 #portfolio img {
@@ -144,14 +171,10 @@ nav a {
 }
 
 #contact span {
-  margin: 0 auto;
+  margin: 10px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
 }
 
 footer {
@@ -180,37 +203,80 @@ footer p {
   #welcome p {
     margin-top: 50px;
   }
-  #about div {
-    padding-left: 0;
-  }
-  #about img {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .show img {
     height: 200px;
     width: 200px;
   }
+  .show p {
+    max-width: 400px;
+  }
+  #about div {
+    margin-top: 5%;
+    padding-left: 0;
+  }
+  #about section {
+    padding-top: 10%;
+    max-width: 80%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #about section img {
+    height: 200px;
+    width: 200px;
+  }
+  #portfolio div {
+    margin: 20px 0 20px 0;
+    width: 80%;
+  }
+  #contact p {
+    padding-top: 10%;
+    margin-bottom: 10%;
+  }
+  #contact span {
+    margin: 10px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
-#portfolio div {
-  width: 80%;
-}
-
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) and (min-width: 1024px) {
   nav a {
     margin-right: 50px;
     color: #d9e7ee;
   }
+  #about section {
+    max-width: 80%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  #about section img {
+    padding-right: 100px;
+    height: 250px;
+    width: 350px;
+  }
   #portfolio {
+    margin: unset;
     margin-bottom: 30px;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-    padding: 0 200px;
+    grid-gap: 20px;
+    margin: 0 auto;
+    border: solid red 2px;
   }
   #portfolio div {
+    margin: 0 auto;
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
+  }
+  #contact p {
+    max-width: 60%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
