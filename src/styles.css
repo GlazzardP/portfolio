@@ -22,6 +22,7 @@ body {
   max-width: -moz-max-content;
   max-width: max-content;
   color: #d9e7ee;
+  cursor: pointer;
 }
 
 nav {
@@ -43,6 +44,7 @@ nav a {
   text-decoration: none;
   margin: auto 10px;
   color: #d9e7ee;
+  cursor: pointer;
 }
 
 .header {
@@ -165,6 +167,11 @@ nav a {
   width: 100%;
 }
 
+#portfolio h3,
+#portfolio p {
+  text-decoration: none;
+}
+
 #contact p {
   width: 80%;
   text-align: center;
@@ -173,7 +180,7 @@ nav a {
   color: #d9e7ee;
 }
 
-#contact span {
+#contact a {
   margin: 10px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -229,21 +236,21 @@ footer p {
     max-width: 300px;
   }
   #about .show img {
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
   }
   #portfolio {
     margin: 0 auto;
   }
   #portfolio div {
     margin: 20px 0;
-    width: 80%;
+    width: 100%;
   }
   #contact p {
     padding-top: 10%;
     margin-bottom: 10%;
   }
-  #contact span {
+  #contact a {
     margin: 10px auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -264,14 +271,16 @@ footer p {
     display: none;
   }
   #about section img {
-    padding-left: 50px;
-    height: 250px;
+    height: 350px;
     width: 350px;
   }
   .show p,
   .show img {
     display: block;
     color: #d9e7ee;
+  }
+  .show p {
+    padding-bottom: 30px;
   }
 }
 
@@ -285,6 +294,7 @@ footer p {
   }
   #portfolio div {
     width: 100%;
+    height: 350px;
   }
   #contact p {
     max-width: 50%;
