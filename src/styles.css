@@ -8,11 +8,11 @@
 }
 
 body {
-  background-color: #30374d;
+  background-color: #f8f6eb;
 }
 
 .button {
-  border: solid 2px #d9e7ee;
+  border: solid 2px #2a232c;
   border-radius: 5px;
   text-decoration: none;
   padding: 5px;
@@ -21,14 +21,14 @@ body {
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
-  color: #d9e7ee;
+  color: #2a232c;
   cursor: pointer;
 }
 
 nav {
   width: 100%;
-  height: 10vh;
-  background-color: #1ba4a2;
+  height: 15vh;
+  background-color: #24b586;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,16 +43,23 @@ nav {
 nav a {
   text-decoration: none;
   margin: auto 10px;
-  color: #d9e7ee;
+  color: #2a232c;
   cursor: pointer;
 }
 
+nav a:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #da4e34;
+          text-decoration-color: #da4e34;
+}
+
 .header {
-  height: 10vh;
-  background-color: #1ba4a2;
-  color: #d9e7ee;
-  padding: 18px;
+  height: 15vh;
+  background-color: #24b586;
+  color: #2a232c;
+  padding: 30px 0 0 0;
   width: 100%;
+  font-size: 30px;
 }
 
 #welcome {
@@ -79,8 +86,8 @@ nav a {
 
 #welcome p {
   padding: 5px;
-  border: solid 2px #d9e7ee;
-  color: #d9e7ee;
+  border: solid 2px #2a232c;
+  color: #2a232c;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -136,7 +143,7 @@ nav a {
 #about .show p,
 #about .show img {
   display: inline-block;
-  color: #d9e7ee;
+  color: #2a232c;
 }
 
 #about .show img {
@@ -154,12 +161,17 @@ nav a {
 }
 
 #portfolio div {
-  border: solid 2px #d9e7ee;
+  border: solid 2px #2a232c;
   height: 50vh;
   margin: 0 auto;
-  color: #d9e7ee;
+  color: #2a232c;
   text-align: center;
   width: 80%;
+}
+
+#portfolio div:hover {
+  -webkit-box-shadow: 2px 2px 2px 2px #da4e34;
+          box-shadow: 2px 2px 2px 2px #da4e34;
 }
 
 #portfolio img {
@@ -177,7 +189,7 @@ nav a {
   text-align: center;
   margin: auto;
   padding: 20px 0;
-  color: #d9e7ee;
+  color: #2a232c;
 }
 
 #contact a {
@@ -188,8 +200,8 @@ nav a {
 }
 
 footer {
-  color: #d9e7ee;
-  background-color: #1ba4a2;
+  color: #2a232c;
+  background-color: #24b586;
 }
 
 footer p {
@@ -199,7 +211,8 @@ footer p {
 @media only screen and (min-width: 768px) {
   nav a {
     margin-right: 20px;
-    color: #d9e7ee;
+    color: #2a232c;
+    font-size: 20px;
   }
   #welcome {
     padding-left: 0;
@@ -261,7 +274,8 @@ footer p {
 @media only screen and (min-width: 768px) and (min-width: 1024px) {
   nav a {
     margin-right: 50px;
-    color: #d9e7ee;
+    color: #2a232c;
+    font-size: 30px;
   }
   #about section {
     max-width: 80%;
@@ -277,7 +291,7 @@ footer p {
   .show p,
   .show img {
     display: block;
-    color: #d9e7ee;
+    color: #2a232c;
   }
   .show p {
     padding-bottom: 30px;
@@ -286,6 +300,7 @@ footer p {
 
 @media only screen and (min-width: 768px) {
   #portfolio {
+    padding: 5%;
     margin-bottom: 30px;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
