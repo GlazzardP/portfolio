@@ -8,7 +8,8 @@
 }
 
 body {
-  background-color: #f8f6eb;
+  background-color: #d4d4d4;
+  color: #333333;
 }
 
 .button {
@@ -33,7 +34,7 @@ body {
 nav {
   width: 100%;
   height: 15vh;
-  background-color: #24b586;
+  background-color: #40798c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,6 +44,14 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+nav img {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  left: 0;
+  margin-left: 20px;
 }
 
 nav a {
@@ -60,11 +69,12 @@ nav a:hover {
 
 .header {
   height: 15vh;
-  background-color: #24b586;
+  background-color: #40798c;
   color: #2a232c;
-  padding: 30px 0 0 5%;
   width: 100%;
   font-size: 30px;
+  padding-left: 30px;
+  line-height: 15vh;
 }
 
 .header:hover {
@@ -74,9 +84,11 @@ nav a:hover {
 }
 
 #welcome {
-  padding-left: 30px;
-  position: static;
-  height: 90vh;
+  background-image: url("./images/landing-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 85vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -87,12 +99,30 @@ nav a:hover {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin-top: 20%;
+}
+
+#welcome div {
+  padding-left: 10%;
+  padding-top: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 #welcome h2,
 #welcome h1 {
   margin-top: 5px;
+}
+
+#welcome h5, #welcome h2 {
+  font-weight: 500;
 }
 
 #welcome p {
@@ -110,7 +140,7 @@ nav a:hover {
   min-height: 100vh;
 }
 
-#about div {
+#about #interestButtons {
   margin: 5px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -128,12 +158,13 @@ nav a:hover {
 
 #about p {
   max-width: 80%;
-  text-align: center;
+  text-align: justify;
   margin: 10px auto;
 }
 
 #about img {
   margin: 0 auto;
+  width: 80%;
 }
 
 #about .hidden {
@@ -157,11 +188,6 @@ nav a:hover {
   color: #2a232c;
 }
 
-#about .show img {
-  height: 100px;
-  width: 100px;
-}
-
 #portfolio {
   display: -ms-grid;
   display: grid;
@@ -173,7 +199,9 @@ nav a:hover {
 
 #portfolio div {
   border: solid 2px #2a232c;
-  height: 50vh;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   margin: 0 auto;
   color: #2a232c;
   text-align: center;
@@ -181,14 +209,44 @@ nav a:hover {
   text-decoration: none;
 }
 
-#portfolio div:hover {
-  -webkit-box-shadow: 2px 2px 2px 2px #da4e34;
-          box-shadow: 2px 2px 2px 2px #da4e34;
+#portfolio div > div {
+  background-color: #e1edf3;
+  margin: 0 auto;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+#portfolio div > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#portfolio div > div .button {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 
 #portfolio img {
-  height: 80%;
+  height: 70%;
   width: 100%;
+  border-bottom: solid black 1px;
 }
 
 #portfolio h3,
@@ -196,24 +254,34 @@ nav a:hover {
   text-decoration: none;
 }
 
+#contact {
+  min-height: 90vh;
+}
+
 #contact p {
   width: 80%;
-  text-align: center;
+  text-align: justify;
   margin: auto;
   padding: 20px 0;
   color: #2a232c;
 }
 
-#contact a {
-  margin: 10px auto;
+#contact div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 footer {
   color: #2a232c;
-  background-color: #24b586;
+  background-color: #40798c;
 }
 
 footer p {
@@ -225,10 +293,6 @@ footer p {
     margin-right: 20px;
     color: #2a232c;
     font-size: 20px;
-  }
-  #welcome {
-    padding-left: 0;
-    margin: 10% 0 0 10%;
   }
   #welcome h5 {
     font-size: 20px;
@@ -243,47 +307,59 @@ footer p {
     margin-top: 50px;
   }
   .button {
-    padding: 10px;
     font-size: 20px;
   }
+  #about {
+    margin-bottom: 20px;
+  }
   #about div {
-    margin-top: 5%;
     padding-left: 0;
   }
   #about section {
     padding-top: 10%;
     max-width: 80%;
-    -webkit-box-orient: horizontal;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  #about .show p {
+  #about .show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #about .show p, #about .show img {
     max-width: 300px;
-  }
-  #about .show img {
-    height: 200px;
-    width: 200px;
   }
   #portfolio {
     margin: 0 auto;
   }
   #portfolio div {
+    height: 40vh;
     margin: 20px 0;
     width: 100%;
+  }
+  #portfolio div div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: unset;
   }
   #contact p {
     padding-top: 10%;
     margin-bottom: 10%;
   }
-  #contact a {
-    margin: 10px auto;
+  #contact div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 20px;
   }
 }
 
@@ -293,29 +369,35 @@ footer p {
     color: #2a232c;
     font-size: 30px;
   }
+  #welcome div {
+    padding-top: 10%;
+  }
   #about section {
     max-width: 80%;
-    padding-top: 5%;
+    padding-top: 20%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   #about section .hidden {
     display: none;
   }
-  #about section img {
-    height: 350px;
-    width: 350px;
-  }
-  .show p,
-  .show img {
+  #about .show p,
+  #about .show img {
+    margin: unset;
     display: block;
     color: #2a232c;
   }
-  .show p {
+  #about .show p {
     padding-bottom: 30px;
     font-size: 20px;
   }
-}
-
-@media only screen and (min-width: 768px) {
   #portfolio {
     padding: 5%;
     margin-bottom: 30px;
@@ -331,6 +413,7 @@ footer p {
   #contact p {
     max-width: 50%;
     margin-bottom: 0;
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

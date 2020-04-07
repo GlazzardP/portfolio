@@ -11,38 +11,42 @@
   </head>
   <body>
     <nav>
-      <a href="">Home</a>
+      <img src="./images/GlazzardLogo.png" alt="Paul Glazzard Logo">
       <a href="#about">About</a>
       <a href="#portfolio">Projects</a>
       <a href="#contact">Contact</a>
-      <span class="fas fa-bars"></span>
+      <!-- <span class="fas fa-bars" id="burgerIcon" ></span> -->
     </nav>
 
     <section id="welcome">
-      <h5>Hi, my name is</h5>
-      <h1>Paul Glazzard.</h1>
-      <h2>A Bristol based Junior Software Developer.</h2>
-      <p class="button" href="mailto:glazzardp@gmail.com">Get in Touch</p>
+      <div>
+        <h5>Hi, my name is</h5>
+        <h1>Paul Glazzard.</h1>
+        <h2>A Bristol based Junior Software Developer.</h2>
+        <p class="button" href="mailto:glazzardp@gmail.com">Get in Touch</p>
+      </div>
     </section>
 
     <section id="about" class="section-header viewPort">
-      <h2 class="header">About</h2>
-      <div>
+      <div class="header">
+        <h2 >About</h2>
+      </div>
+      <div id="interestButtons">
           <span onclick="toggleHiddenClass('section-1')" class="tab-rotate button">Interests</span>
           <span onclick="toggleHiddenClass('section-2')" class="tab-rotate button">Hobbies</span>
           <span onclick="toggleHiddenClass('section-3')" class="tab-rotate button">Others</span>
       </div>
   
         <section id="section-1" class="hidden show">
-          <p>I have always been interested in technology and the way things work. This is on of the many 
-            things that encouraged me to join Nology'scoding bootcamp in January 2020. Since then, my passion for
-          all things tech has with m abilty to build new and intersting things.
+          <p>I have always been interested in technology and the way things work. This is one of the many 
+            things that encouraged me to join Nology's coding bootcamp in January 2020. Since then, my passion for
+          all things tech has grown hand in hand with my abilty to build new and intersting things.
          </p>
           <img src="./images/IMG_3056.JPG" alt="">
         </section>
         <section id="section-2" class="hidden">
-          <p>During the summer months I try to go camping and surfing as often as possible. When's it so warm
-            , I have a season ticket to Bristol Bears Rugby which I g to with my friends. 
+          <p>During the summer months I try to go camping and surfing as often as possible. When's it not so warm
+            , I go to Bristol Bears Rugby with friends every other week. 
             </p>
           <img src="./images/atanango group.jpg" alt=""/>
         </section>
@@ -56,68 +60,106 @@
 
     </section>
     <section id="portfolio-section viewPort">
-      <h2 class="header">Portfolio</h2>
+      <div class="header">
+        <h2 >Portfolio</h2>
+      </div>
     </section>
     <section id="portfolio">
 
 
-      <a href="https://vojo-bbe4f.firebaseapp.com/priorities-page" target="_blank">
-        <div href="">
+      <!-- <a href="https://vojo-bbe4f.firebaseapp.com/priorities-page" target="_blank"> -->
+        <div>
           <img src="./images/vojo.PNG" alt="Vojo" />
-          <h3>Vojo</h3>
-          <p>Client Project</p>
-        </div>
-      </a>  
-
-
-        <a href="www.news.paulglazzard.co.uk" target="_blank">
-          <div href="">
-            <img src="./images/news.png" alt="" />
-            <h3>KWVN News</h3>
-            <p>React - Database(CRUD), Authentication, API, State</p>
+          <div>
+            <h3>Vojo</h3>
+            <p>React, Authentication, Database (CRUD) and UX</p>
+            <div>
+              <p  class="button">GitHub</p>
+              <p class="button">Live site</p>
+            </div>
           </div>
-        </a>  
+        </div>
+      <!-- </a>   -->
 
 
-      <a href="to-do.paulglazzard.co.uk" target="_blank">
-        <div href="">
+        <!-- <a href="https://news.paulglazzard.co.uk" target="_blank"> -->
+          <div>
+            <img src="./images/newsLogo.png" alt="" />
+            <div>
+              <h3>Vojo</h3>
+              <p>React, Authentication, Database (CRUD) and UX</p>
+              <div>
+                <p  class="button">GitHub</p>
+                <p class="button">Live site</p>
+              </div>
+            </div>
+          </div>
+        <!-- </a>   -->
+
+
+      <!-- <a href="https://to-do.paulglazzard.co.uk" target="_blank"> -->
+        <div>
           <img src="./images/best-to-do-list-apps-for-task-management (1).jpg" alt="" />
-          <h3>To Do</h3>
-          <p>React - DB(CRUD)</p>
+          <div>
+            <h3>Vojo</h3>
+            <p>React, Authentication, Database (CRUD) and UX</p>
+            <div>
+              <p  class="button">GitHub</p>
+              <p class="button">Live site</p>
+            </div>
+          </div>
         </div>
-      </a>  
+      <!-- </a>   -->
 
 
-      <a href="www.bristol-bears.paulglazzard.co.uk" target="_blank">
-        <div href="">
+      <!-- <a href="https://bristol-bears.paulglazzard.co.uk" target="_blank"> -->
+        <div>
           <img src="./images/Bears-logo-on-white.jpg" alt="" />
-          <h3>Team Selector</h3>
-          <p>React - Iterators, Props, State</p>
+          <div>
+            <h3>Vojo</h3>
+            <p>React, Authentication, Database (CRUD) and UX</p>
+            <div>
+              <p  class="button">GitHub</p>
+              <p class="button">Live site</p>
+            </div>
+          </div>
         </div>
-      </a>  
+      <!-- </a>   -->
         
-      <a href="www.hostile-aliens.paulglazzard.co.uk" target="_blank">
-        <div href="">
+      <!-- <a href="https://hostile-aliens.paulglazzard.co.uk" target="_blank"> -->
+        <div>
           <img src="./images/invader.webp" alt="" />
-          <h3>Hostile Aliens</h3>
-          <p>Vanilla HTML/JS - Array Iterators</p>
+          <div>
+            <h3>Vojo</h3>
+            <p>React, Authentication, Database (CRUD) and UX</p>
+            <div>
+              <p  class="button">GitHub</p>
+              <p class="button">Live site</p>
+            </div>
+          </div>
         </div>
-      </a>  
+      <!-- </a>   -->
 
 
-      <a href="www.morsecode.paulglazzard.co.uk" target="_blank">
-        <div href="">
+      <!-- <a href="https://morsecode.paulglazzard.co.uk" target="_blank"> -->
+        <div>
           <img src="./images/morsecode.png" alt="" />
-          <h3>Morsecode Translator</h3>
-          <p>Vanilla HTML/JS - Array Iterators</p>
+          <div>
+            <h3>Vojo</h3>
+            <p>React, Authentication, Database (CRUD) and UX</p>
+            <div>
+              <p  class="button">GitHub</p>
+              <p class="button">Live site</p>
+            </div>
+          </div>
         </div>
-      </a>  
+      <!-- </a>   -->
 
  
 
     </section>
 
-      <section id="contact" class="section-header viewPort">
+      <section id="contact" class="section-header">
         <h2 class="header">Contact</h2>
         <p>
           Whether you are thinking about starting in a career in 
@@ -125,8 +167,10 @@
           like to talk about work. Please do get in touch using the
           below form. 
         </p>
-        <a class="button" href="mailto:paul-glazzard@hotmail.co.uk">Get In Touch</a>
-        <a class="button" href="https://www.linkedin.com/in/paul-glazzard-94057215a/" target="_blank">LinkedIn</a>
+        <div>
+          <a class="button" href="mailto:paul-glazzard@hotmail.co.uk">Email me</a>
+          <a class="button" href="https://www.linkedin.com/in/paul-glazzard-94057215a/" target="_blank">LinkedIn</a>
+        </div>
       </section>
 
       <footer>
