@@ -334,13 +334,10 @@ footer p {
   #about .show p, #about .show img {
     max-width: 300px;
   }
-  #portfolio {
-    margin: 0 auto;
-  }
   #portfolio div {
     height: 40vh;
-    margin: 20px 0;
-    width: 100%;
+    margin: 20px auto;
+    width: 80%;
   }
   #portfolio div div {
     display: -webkit-box;
@@ -374,7 +371,7 @@ footer p {
   }
   #about section {
     max-width: 80%;
-    padding-top: 20%;
+    padding-top: 10%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
