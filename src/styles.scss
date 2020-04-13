@@ -1,7 +1,7 @@
 $tertiary-color: rgb(212, 212, 212);
 $primary-color: rgb(64,121,140);
 $secondary-color: rgb(42,35,44);
-$fourth-color: rgb(218,78,52);
+$fourth-color: rgb(114,25,90);
 $base-spacing: 6px;
 $text-color: rgb(51,51,51);
 $div-color: rgb(225, 237, 243);
@@ -34,7 +34,7 @@ body {
 
 .button:hover { 
   color: $fourth-color;
-  text-decoration: underline;
+  // text-decoration: underline;
 }
 
 nav {
@@ -71,14 +71,20 @@ nav {
   color: $secondary-color;
   width: 100%;
   font-size: 30px;
-  padding-left: 30px;
   line-height: 15vh;
+
+  h2 { 
+    padding-left: 30px;
+    width: min-content;
+
+  }
+
+  h2:hover { 
+    text-decoration: underline;
+    text-decoration-color: $fourth-color;
+  }
 }
 
-.header:hover { 
-  text-decoration: underline;
-  text-decoration-color: $fourth-color;
-}
 
 #welcome {
   background-image: url('./images/landing-background.jpg');
@@ -108,7 +114,7 @@ nav {
     font-weight: 500;
   }
 
-  p {
+  span {
     padding: 5px;
     border: solid 2px $secondary-color;
     color: $secondary-color;
@@ -168,12 +174,12 @@ nav {
 #portfolio {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 10px;
+  grid-gap: 40px;
   margin: 20px 0;
 
   div {
     border: solid 2px $secondary-color;
-    height: max-content;
+    height: fit-content;
     margin: 0 auto;
     color: $secondary-color;
     text-align: center;
@@ -191,7 +197,7 @@ nav {
       > div { 
         display: flex;
         flex-direction: row;
-        margin: 0 auto;
+        // margin: 0 auto;
         justify-content: center;
       }
 
@@ -201,14 +207,10 @@ nav {
     }
   }
 
-  // div:hover { 
-  //   box-shadow: 2px 2px 2px 2px rgb(218,78,52);
-  // }
-
   img {
     height: 70%;
     width: 100%;
-    border-bottom: solid black 1px;
+    // border-bottom: solid black 1px;
   }
   h3,
   p {
@@ -227,7 +229,7 @@ nav {
     padding: 20px 0;
     color: $secondary-color;
   }
-  div  {
+  #contactBtn  {
     // padding-top: 10%;
     display: flex;
     flex-direction: row;
@@ -318,7 +320,7 @@ footer {
       padding-top: 10%;
       margin-bottom: 10%;
     }
-    div { 
+    #contactBtn { 
     display: flex;
     justify-content: center;
     margin-top: 20px;;
@@ -331,6 +333,13 @@ footer {
         margin-right: 50px;
         color: $secondary-color;
         font-size: 30px;
+      }
+    }
+
+    .header { 
+
+      h2 { 
+      padding-left: 30px;
       }
     }
 
